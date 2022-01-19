@@ -1,51 +1,55 @@
 # include "push_swap.h"
 
-void	ft_onlynumbers(char **args)
+int	ft_onlynumbers(char *arg)
 {
-	unsigned int	i;
-	unsigned int 	j;
+	unsigned int 	counter;
 
-	i = 0;
-	while (args[i])
+	counter = 0;
+	while (arg[counter] != '\0')
 	{
-		j = 0;
-		while (args[i][j] != '\0')
+		if ((!ft_isdigit(arg[counter])))
 		{
-			if ((!ft_isdigit(args[i][j])))
-			{
-				if (j != 0 || args[i][j] != '-')
-					ft_freeandexit(args, '1');
-			}
-			j++;
+			if (counter != 0 || (arg[counter] != '-')
+				|| (counter == 0 && arg[counter] == '-' && !arg[counter + 1]))
+				return (1);
 		}
-		i++;
+		counter++;
 	}
-	return ;
+	return (0);
 }
 
-void	ft_noduplicates(char **args)
+int	ft_noduplicates(char **args, int i)
 {
-	int	i;
 	int	j;
 
-	i = 0;
-	while (args[i])
+	j = i + 1;
+	while (args[j])
 	{
-		j = i + 1;
-		while (args[j])
-		{
-			if (ft_strcmp(args[i], args[j]) == 0)
-				ft_freeandexit(args, '2');
-			j++;
-		}
-		i++;
+		if (ft_strcmp(args[i], args[j]) == 0)
+			return (1);
+		j++;
 	}
-	return ;
+	return (0);
+}
+
+int	ft_overflow(char *arg)
+{
+	if(arg)
+		return(0);
+	return (0);
 }
 
 void	ft_isvalid(char **args)
 {
-	ft_onlynumbers(args);
-	ft_noduplicates(args);
+	unsigned int	counter;
+
+	counter = 0;
+	while (args[counter])
+	{
+		if (ft_onlynumbers(args[counter]) || ft_noduplicates(args, counter)
+		|| ft_overflow(args[counter]))
+			ft_freeandexit(args);
+		counter++;
+	}
 	return ;
 }

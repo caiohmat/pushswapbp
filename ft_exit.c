@@ -14,9 +14,9 @@ void	ft_freeptr(char **args)
 	return ;
 }
 
-void	ft_freeandexit(char **args, int exitnbr)
+void	ft_freeandexit(char **args)
 {
 	ft_freeptr(args);
 	ft_putstr_fd("Error\n", 2);
-	exit (exitnbr);
+	exit (1);
 }

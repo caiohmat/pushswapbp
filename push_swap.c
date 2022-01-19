@@ -38,6 +38,6 @@ int	main(int argc, char **argv)
 	}
 	ft_isvalid(args);
 	printf("valid\n");
-	ft_freeptr(args);
+	ft_freeandexit(args);
 	return (0);
 }
