@@ -34,8 +34,11 @@ int	ft_noduplicates(char **args, int i)
 
 int	ft_overflow(char *arg)
 {
-	if(arg)
-		return(0);
+	long	n;
+
+	n = ft_atoi(arg);
+	if (n > 2147483647 || n < -2147483648)
+		return(1);
 	return (0);
 }
 

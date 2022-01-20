@@ -6,14 +6,14 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2021/09/10 13:33:59 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/01/20 16:57:51 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char	*nptr)
+long	ft_atoi(const char	*nptr)
 {
-	int	nbr;
-	int	sign;
+	long	nbr;
+	int		sign;
 
 	while (*nptr == ' ' || *nptr == '\f' || *nptr == '\n'
 		|| *nptr == '\r' || *nptr == '\t' || *nptr == '\v')

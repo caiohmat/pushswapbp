@@ -24,7 +24,9 @@ char	**ft_getnbrs(int argc, char **argv)
 int	main(int argc, char **argv)
 {
 	char	**args;
-	int	counter;
+	int		counter;
+	t_stk	**stka;
+	t_stk	**stkb;
 
 	if (argc < 2)
 		exit(0);
@@ -37,6 +39,11 @@ int	main(int argc, char **argv)
 		counter++;
 	}
 	ft_isvalid(args);
+	stka = malloc(sizeof(t_stk **));
+	stkb = malloc(sizeof(t_stk **));
+	stka = NULL;
+	stkb = NULL;
+	ft_stackstart(stka, args);
 	printf("valid\n");
 	ft_freeandexit(args);
 	return (0);
