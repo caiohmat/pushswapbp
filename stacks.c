@@ -27,8 +27,29 @@ t_stk	*createentry(int nbr)
 	entry->next = NULL;
 	return (entry);
 }
-
-void	ft_addentryback(t_stk **stk, t_stk *entry)
+t_stk	*ft_findlast(t_stk	*entry)
 {
-	
+	t_stk	*lastentry;
+
+	lastentry = entry;
+	while (tempentry->next)
+		tempentry = tempentry->next;
+	return (lastentry);
+}
+
+void	ft_addentryback(t_stk **stk, t_stk *newentry)
+{
+	t_stk	*lastentry;
+
+	if(!(*stk))
+	{
+		*stk = newentry;
+		*stk->next = NULL;
+	}
+	else
+	{
+		lastentry = ft_findlast(*stk);
+		lastentry->next = newentry;
+		entry->next = NULL;
+	}
 }
