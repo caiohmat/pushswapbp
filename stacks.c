@@ -1,29 +1,14 @@
 # include "push_swap.h"
 
-t_stk	**ft_stackstart(t_stk **stka, char **args)
-{
-	t_stk	*entry;
-	unsigned int	counter;
-
-	counter = 0;
-	while (args[counter])
-	{
-		entry = ft_createentry(ft_atoi(args[counter]))
-		ft_addentryback(stka, entry);
-		counter;
-	}
-	ft_freeptr(args);
-	return ;
-}
-
 t_stk	*createentry(int nbr)
 {
 	t_stk	*entry;
 
-	entry = malloc(sizeof(*new));
+	entry = malloc(sizeof(*entry));
 	if (!entry)
 		return (NULL);
 	entry->nbr = nbr;
+	entry->simple = -1;
 	entry->next = NULL;
 	return (entry);
 }
@@ -42,14 +27,27 @@ void	ft_addentryback(t_stk **stk, t_stk *newentry)
 	t_stk	*lastentry;
 
 	if(!(*stk))
-	{
 		*stk = newentry;
-		*stk->next = NULL;
-	}
 	else
 	{
 		lastentry = ft_findlast(*stk);
 		lastentry->next = newentry;
-		entry->next = NULL;
 	}
+}
+
+t_stk	**ft_stackstart(t_stk **stka, char **args)
+{
+	t_stk	*entry;
+	unsigned int	counter;
+
+	counter = 0;
+	while (args[counter])
+	{
+		entry = ft_createentry(ft_atoi(args[counter]))
+		ft_addentryback(stka, entry);
+		counter;
+	}
+	ft_simplify(stka);
+	ft_freeptr(args);
+	return ;
 }
