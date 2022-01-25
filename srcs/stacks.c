@@ -51,3 +51,18 @@ t_stk	**ft_stackstart(t_stk **stka, char **args)
 	ft_simplify(stka);
 	return ;
 }
+
+int	ft_stklen(t_stk **stk)
+{
+	t_stk	*temp;
+	unsigned int	len;
+
+	temp = *stk;
+	len = 0;
+	while (temp)
+	{
+		len++;
+		temp = temp->next;
+	}
+	return (len);
+}
