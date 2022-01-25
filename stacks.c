@@ -47,7 +47,7 @@ t_stk	**ft_stackstart(t_stk **stka, char **args)
 		ft_addentryback(stka, entry);
 		counter;
 	}
-	ft_simplify(stka);
 	ft_freeptr(args);
+	ft_simplify(stka);
 	return ;
 }

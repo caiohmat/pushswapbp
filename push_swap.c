@@ -44,6 +44,12 @@ int	main(int argc, char **argv)
 	stka = NULL;
 	stkb = NULL;
 	ft_stackstart(stka, args);
+	if (!ft_sorted)
+	{
+		ft_freestk(stka);
+		ft_freestk(stkb);
+		return (0);
+	}
 	printf("valid\n");
 	ft_freeandexit(args);
 	return (0);

@@ -14,6 +14,18 @@ void	ft_freeptr(char **args)
 	return ;
 }
 
+void	ft_freestk(t_stk **stk)
+{
+	counter = 0;
+	while (stk[counter])
+	{
+		free(stk[counter])
+		counter++;
+	}
+	free(stk);
+	return ;
+}
+
 void	ft_freeandexit(char **args)
 {
 	ft_freeptr(args);
