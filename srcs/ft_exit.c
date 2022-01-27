@@ -1,4 +1,4 @@
-# include "push_swap.h"
+# include "../include/push_swap.h"
 
 void	ft_freeptr(char **args)
 {
@@ -16,11 +16,13 @@ void	ft_freeptr(char **args)
 
 void	ft_freestk(t_stk **stk)
 {
-	counter = 0;
-	while (stk[counter])
+	t_stk	*temp;
+
+	temp = *stk;
+	while (temp)
 	{
-		free(stk[counter])
-		counter++;
+		free(temp);
+		temp = temp->next;
 	}
 	free(stk);
 	return ;

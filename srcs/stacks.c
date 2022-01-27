@@ -1,10 +1,10 @@
-# include "push_swap.h"
+# include "../include/push_swap.h"
 
-t_stk	*createentry(int nbr)
+t_stk	*ft_createentry(int nbr)
 {
 	t_stk	*entry;
 
-	entry = malloc(sizeof(*entry));
+	entry = (t_stk *) malloc(sizeof(*entry));
 	if (!entry)
 		return (NULL);
 	entry->nbr = nbr;
@@ -17,8 +17,8 @@ t_stk	*ft_findlast(t_stk	*entry)
 	t_stk	*lastentry;
 
 	lastentry = entry;
-	while (tempentry->next)
-		tempentry = tempentry->next;
+	while (lastentry->next)
+		lastentry = lastentry->next;
 	return (lastentry);
 }
 
@@ -26,16 +26,21 @@ void	ft_addentryback(t_stk **stk, t_stk *newentry)
 {
 	t_stk	*lastentry;
 
-	if(!(*stk))
-		*stk = newentry;
-	else
+
+	printf("tt:%d\n", newentry->nbr);
+	if(*stk)
 	{
 		lastentry = ft_findlast(*stk);
 		lastentry->next = newentry;
 	}
+	else
+	{
+		*stk = newentry;
+		(*stk)->next = NULL;;
+	}
 }
 
-t_stk	**ft_stackstart(t_stk **stka, char **args)
+void	ft_stackstart(t_stk **stka, char **args)
 {
 	t_stk	*entry;
 	unsigned int	counter;
@@ -43,11 +48,12 @@ t_stk	**ft_stackstart(t_stk **stka, char **args)
 	counter = 0;
 	while (args[counter])
 	{
-		entry = ft_createentry(ft_atoi(args[counter]))
+		entry = ft_createentry(ft_atoi(args[counter]));
 		ft_addentryback(stka, entry);
-		counter;
+		counter++;
 	}
 	ft_freeptr(args);
+	printf("%s\n", "teste123");
 	ft_simplify(stka);
 	return ;
 }

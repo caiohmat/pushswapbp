@@ -1,4 +1,4 @@
-# include "push_swap.h"
+# include "../include/push_swap.h"
 
 t_stk	*ft_ascending(t_stk **stka)
 {
@@ -24,7 +24,7 @@ void ft_simplify(t_stk **stka)
 	temp = ft_ascending(stka);
 	while (temp)
 	{
-		temp->simple = index++;
+		temp->simple = simple++;
 		temp = ft_ascending(stka);
 	}
 	return ;
@@ -37,7 +37,7 @@ int	ft_sorted(t_stk **stka)
 	temp = *stka;
 	while (temp && temp->next)
 	{
-		if (temp->nbr > temp->next->nbr)
+		if (temp->nbr >= temp->next->nbr)
 			return (1);
 		temp = temp->next;
 	}

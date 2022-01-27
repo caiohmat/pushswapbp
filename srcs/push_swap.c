@@ -1,4 +1,22 @@
-#include "push_swap.h"
+#include "../include/push_swap.h"
+
+void	escreve(t_stk **stka, t_stk **stkb)
+{
+	t_stk	*temp;
+
+	temp = *stka;
+	while (temp)
+	{
+		printf("%d \\", temp->nbr);
+		temp = temp->next;
+	}
+	temp = *stkb;
+	while (temp)
+	{
+		printf("%d \n", temp->nbr);
+		temp = temp->next;
+	}
+}
 
 static char	**ft_getnbrs(int argc, char **argv)
 {
@@ -23,10 +41,13 @@ static char	**ft_getnbrs(int argc, char **argv)
 
 static void	ft_sort(t_stk **stka, t_stk **stkb)
 {
-	if (stklen(stka) <= 5)
-		ft_sort_short(stka, stkb);
+	escreve(stka, stkb);
+	if (ft_stklen(stka) <= 5)
+	{
+		printf("%s", "aaaa");
+	}
 	else
-		ft_sort_long(stka, stkb);
+		printf("%s", "nnn");
 }
 
 int	main(int argc, char **argv)
@@ -39,12 +60,12 @@ int	main(int argc, char **argv)
 		return (0);
 	args = ft_getnbrs(argc, argv);
 	ft_isvalid(args);
-	stka = malloc(sizeof(t_stk **));
-	stkb = malloc(sizeof(t_stk **));
-	stka = NULL;
-	stkb = NULL;
+	stka = (t_stk **)malloc(sizeof(t_stk));
+	stkb = (t_stk **)malloc(sizeof(t_stk));
+	*stka = NULL;
+	*stkb = NULL;
 	ft_stackstart(stka, args);
-	if (!ft_sorted)
+	if (!ft_sorted(stka))
 	{
 		ft_freestk(stka);
 		ft_freestk(stkb);

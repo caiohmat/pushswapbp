@@ -4,9 +4,13 @@ LIBFT	:= libft
 NAME	:= push_swap
 CFLAGS	:= -Wall -Wextra -Werror -o
 CC	:= gcc
-SRCS	:= ft_isvalid.c \
-			ft_exit.c \
-			push_swap.c
+SRCS	:= srcs/ft_isvalid.c \
+			srcs/ft_exit.c \
+			srcs/ft_simplify.c\
+			srcs/stacks.c\
+			commands/push.c\
+			commands/swap.c\
+			srcs/push_swap.c
 
 all	: $(NAME)
 
