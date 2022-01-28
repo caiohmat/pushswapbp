@@ -10,6 +10,8 @@ SRCS	:= srcs/ft_isvalid.c \
 			srcs/stacks.c\
 			commands/push.c\
 			commands/swap.c\
+			commands/rotate.c\
+			commands/reverse.c\
 			srcs/push_swap.c
 
 all	: $(NAME)

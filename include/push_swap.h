@@ -25,5 +25,12 @@ int	ft_sorted(t_stk **stka);
 int	sa(t_stk **stka);
 int	sb(t_stk **stkb);
 int ss(t_stk **stka, t_stk **stkb);
+int	ra(t_stk **stka);
+int	rb(t_stk **stkb);
+int rr(t_stk **stka, t_stk **stkb);
+int	rra(t_stk **stka);
+int	rrb(t_stk **stkb);
+int rrr(t_stk **stka, t_stk **stkb);
+t_stk	*ft_findlast(t_stk	*entry);
 
 #endif

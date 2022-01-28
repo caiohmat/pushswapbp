@@ -53,6 +53,10 @@ static void	ft_sort(t_stk **stka, t_stk **stkb)
 	pb(stka, stkb);
 	pb(stka, stkb);
 	escreve(stka, stkb);
+	rr(stka,stkb);
+	escreve(stka, stkb);
+	rrr(stka,stkb);
+	escreve(stka, stkb);
 }
 
 int	main(int argc, char **argv)

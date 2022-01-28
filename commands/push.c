@@ -2,26 +2,23 @@
 
 static int	ft_push(t_stk **sender, t_stk **receiver)
 {
-	t_stk	*trec;
 	t_stk	*temp;
 
 	if (!*sender)
-		return (0);
-	trec = *receiver;
+		return (1);
 	temp = *sender;
 	*sender = (*sender)->next;
-	if (!trec)
+	if (!(*receiver))
 	{
-		trec = temp;
-		trec->next = NULL;
-		*receiver = trec;
+		*receiver = temp;
+		(*receiver)->next = NULL;
 	}
 	else
 	{
-		temp->next = trec;
+		temp->next = *receiver;
 		*receiver = temp;
 	}
-	return (1);
+	return (0);
 }
 
 int pa(t_stk **stka, t_stk **stkb)
