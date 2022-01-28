@@ -11,6 +11,7 @@ t_stk	*ft_ascending(t_stk **stka)
 	{
 		if ((temp->simple == -1) && (!lowest || temp->nbr < lowest->nbr))
 			lowest = temp;
+		temp = temp->next;
 	}
 	return (lowest);
 }

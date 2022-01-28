@@ -7,15 +7,17 @@ void	escreve(t_stk **stka, t_stk **stkb)
 	temp = *stka;
 	while (temp)
 	{
-		printf("%d \\", temp->nbr);
+		printf("%d ", temp->simple);
 		temp = temp->next;
 	}
+	printf("\n");
 	temp = *stkb;
 	while (temp)
 	{
-		printf("%d \n", temp->nbr);
+		printf("%d ", temp->simple);
 		temp = temp->next;
 	}
+	printf("\n");
 }
 
 static char	**ft_getnbrs(int argc, char **argv)
@@ -42,12 +44,15 @@ static char	**ft_getnbrs(int argc, char **argv)
 static void	ft_sort(t_stk **stka, t_stk **stkb)
 {
 	escreve(stka, stkb);
-	if (ft_stklen(stka) <= 5)
-	{
-		printf("%s", "aaaa");
-	}
-	else
-		printf("%s", "nnn");
+	sa(stka);
+	escreve(stka, stkb);
+	pb(stka, stkb);
+	pb(stka, stkb);
+	ss(stka, stkb);
+	escreve(stka, stkb);
+	pb(stka, stkb);
+	pb(stka, stkb);
+	escreve(stka, stkb);
 }
 
 int	main(int argc, char **argv)

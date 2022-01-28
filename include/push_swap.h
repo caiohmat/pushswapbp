@@ -22,5 +22,8 @@ int pb(t_stk **stka, t_stk **stkb);
 int	ft_stklen(t_stk **stk);
 void	ft_freestk(t_stk **stk);
 int	ft_sorted(t_stk **stka);
+int	sa(t_stk **stka);
+int	sb(t_stk **stkb);
+int ss(t_stk **stka, t_stk **stkb);
 
 #endif

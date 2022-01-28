@@ -17,12 +17,14 @@ void	ft_freeptr(char **args)
 void	ft_freestk(t_stk **stk)
 {
 	t_stk	*temp;
+	t_stk	*temp2;
 
 	temp = *stk;
 	while (temp)
 	{
-		free(temp);
+		temp2 = temp;
 		temp = temp->next;
+		free(temp2);
 	}
 	free(stk);
 	return ;

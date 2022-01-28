@@ -26,8 +26,6 @@ void	ft_addentryback(t_stk **stk, t_stk *newentry)
 {
 	t_stk	*lastentry;
 
-
-	printf("tt:%d\n", newentry->nbr);
 	if(*stk)
 	{
 		lastentry = ft_findlast(*stk);
@@ -53,7 +51,6 @@ void	ft_stackstart(t_stk **stka, char **args)
 		counter++;
 	}
 	ft_freeptr(args);
-	printf("%s\n", "teste123");
 	ft_simplify(stka);
 	return ;
 }

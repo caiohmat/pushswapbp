@@ -2,17 +2,14 @@
 
 static int	ft_push(t_stk **sender, t_stk **receiver)
 {
-	t_stk	*tsend;
 	t_stk	*trec;
 	t_stk	*temp;
 
 	if (!*sender)
 		return (0);
 	trec = *receiver;
-	tsend = *sender;
-	temp = tsend;
-	tsend = tsend->next;
-	*sender = tsend;
+	temp = *sender;
+	*sender = (*sender)->next;
 	if (!trec)
 	{
 		trec = temp;
