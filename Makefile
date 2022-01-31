@@ -8,6 +8,7 @@ SRCS	:= srcs/ft_isvalid.c \
 			srcs/ft_exit.c \
 			srcs/ft_simplify.c\
 			srcs/stacks.c\
+			srcs/ft_radix.c\
 			commands/push.c\
 			commands/swap.c\
 			commands/rotate.c\

@@ -1,4 +1,4 @@
-#include "../include/push_swap.h"
+# include "../include/push_swap.h"
 
 void	escreve(t_stk **stka, t_stk **stkb)
 {
@@ -43,20 +43,10 @@ static char	**ft_getnbrs(int argc, char **argv)
 
 static void	ft_sort(t_stk **stka, t_stk **stkb)
 {
-	escreve(stka, stkb);
-	sa(stka);
-	escreve(stka, stkb);
-	pb(stka, stkb);
-	pb(stka, stkb);
-	ss(stka, stkb);
-	escreve(stka, stkb);
-	pb(stka, stkb);
-	pb(stka, stkb);
-	escreve(stka, stkb);
-	rr(stka,stkb);
-	escreve(stka, stkb);
-	rrr(stka,stkb);
-	escreve(stka, stkb);
+	if (ft_stklen(stka) <= 5)
+		ft_simplesort(stka, stkb, ft_stklen(stka));
+	else
+		ft_radix(stka,stkb, ft_stklen(stka));
 }
 
 int	main(int argc, char **argv)
@@ -81,6 +71,7 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	ft_sort(stka, stkb);
+	escreve(stka, stkb);
 	ft_freestk(stka);
 	ft_freestk(stkb);
 	return (0);
