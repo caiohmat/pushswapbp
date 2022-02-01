@@ -18,6 +18,7 @@ void	escreve(t_stk **stka, t_stk **stkb)
 		temp = temp->next;
 	}
 	printf("\n");
+	return ;
 }
 
 static char	**ft_getnbrs(int argc, char **argv)
@@ -47,6 +48,7 @@ static void	ft_sort(t_stk **stka, t_stk **stkb)
 		ft_simplesort(stka, stkb, ft_stklen(stka));
 	else
 		ft_radix(stka,stkb, ft_stklen(stka));
+	return ;
 }
 
 int	main(int argc, char **argv)
@@ -71,7 +73,6 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	ft_sort(stka, stkb);
-	escreve(stka, stkb);
 	ft_freestk(stka);
 	ft_freestk(stkb);
 	return (0);

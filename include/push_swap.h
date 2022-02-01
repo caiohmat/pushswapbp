@@ -33,5 +33,7 @@ int	rrb(t_stk **stkb);
 int rrr(t_stk **stka, t_stk **stkb);
 t_stk	*ft_findlast(t_stk	*entry);
 void	ft_radix(t_stk **stka, t_stk **stkb, int len);
+int	ft_findmin(t_stk **stka, int min);
+void	ft_simplesort(t_stk **stka, t_stk **stkb, int len);
 
 #endif

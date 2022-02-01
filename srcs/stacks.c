@@ -12,6 +12,7 @@ t_stk	*ft_createentry(int nbr)
 	entry->next = NULL;
 	return (entry);
 }
+
 t_stk	*ft_findlast(t_stk	*entry)
 {
 	t_stk	*lastentry;
@@ -20,6 +21,24 @@ t_stk	*ft_findlast(t_stk	*entry)
 	while (lastentry->next)
 		lastentry = lastentry->next;
 	return (lastentry);
+}
+
+int	ft_findmin(t_stk **stka, int min)
+{
+	t_stk	*temp;
+	int		counter;
+	int		position;
+
+	counter = 0;
+	temp = *stka;
+	while (temp)
+	{
+		if (temp->simple == min)
+			position = counter;
+		counter++;
+		temp = temp->next;
+	}
+	return (position);
 }
 
 void	ft_addentryback(t_stk **stk, t_stk *newentry)
@@ -36,6 +55,7 @@ void	ft_addentryback(t_stk **stk, t_stk *newentry)
 		*stk = newentry;
 		(*stk)->next = NULL;;
 	}
+	return ;
 }
 
 void	ft_stackstart(t_stk **stka, char **args)
@@ -68,4 +88,17 @@ int	ft_stklen(t_stk **stk)
 		temp = temp->next;
 	}
 	return (len);
+}
+int	ft_sorted(t_stk **stka)
+{
+	t_stk	*temp;
+
+	temp = *stka;
+	while (temp && temp->next)
+	{
+		if (temp->nbr >= temp->next->nbr)
+			return (1);
+		temp = temp->next;
+	}
+	return (0);
 }

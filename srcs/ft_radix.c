@@ -47,4 +47,5 @@ void	ft_radix(t_stk **stka, t_stk **stkb, int len)
 			pa(stka, stkb);
 		bitcount++;
 	}
+	return ;
 }

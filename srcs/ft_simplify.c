@@ -30,17 +30,3 @@ void ft_simplify(t_stk **stka)
 	}
 	return ;
 }
-
-int	ft_sorted(t_stk **stka)
-{
-	t_stk	*temp;
-
-	temp = *stka;
-	while (temp && temp->next)
-	{
-		if (temp->nbr >= temp->next->nbr)
-			return (1);
-		temp = temp->next;
-	}
-	return (0);
-}
