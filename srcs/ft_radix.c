@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_radix.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/02 18:45:54 by chideyuk          #+#    #+#             */
+/*   Updated: 2022/02/02 18:45:55 by chideyuk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 int	ft_numberofbits(t_stk **stka)
@@ -8,9 +20,10 @@ int	ft_numberofbits(t_stk **stka)
 
 	temp = *stka;
 	bits = 0;
+	max = 0;
 	while (temp)
 	{
-		if(temp->simple > max || !max)
+		if (temp->simple > max || !max)
 			max = temp->simple;
 		temp = temp->next;
 	}
