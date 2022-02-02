@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:54 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 18:45:55 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:24:03 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_numberofbits(t_stk **stka)
 {
-	t_stk	*temp;
-	int		max;
-	int		bits;
+	t_stk				*temp;
+	unsigned int		max;
+	int					bits;
 
 	temp = *stka;
 	bits = 0;
@@ -35,12 +35,12 @@ int	ft_numberofbits(t_stk **stka)
 	return (bits);
 }
 
-void	ft_radix(t_stk **stka, t_stk **stkb, int len)
+void	ft_radix(t_stk **stka, t_stk **stkb, unsigned int len)
 {
-	t_stk	*temp;
-	int		bitcount;
-	int		counter;
-	int		bitmax;
+	t_stk				*temp;
+	int					bitcount;
+	unsigned int		counter;
+	int					bitmax;
 
 	bitmax = ft_numberofbits(stka);
 	bitcount = 0;

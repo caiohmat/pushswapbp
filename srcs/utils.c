@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 19:31:31 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 19:33:09 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:20:02 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_sorted(t_stk **stka)
 	return (0);
 }
 
-int	ft_stklen(t_stk **stk)
+unsigned int	ft_stklen(t_stk **stk)
 {
 	t_stk			*temp;
 	unsigned int	len;

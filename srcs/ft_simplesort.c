@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:58 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 19:19:25 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:26:11 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static void	ft_pushmin(t_stk **stka, t_stk **stkb, int min)
 	int	minpos;
 
 	minpos = ft_findmin(stka, min);
-	if (minpos + 1 == ft_stklen(stka))
+	if (minpos + 1 == (int) ft_stklen(stka))
 		rra(stka);
-	else if (ft_stklen(stka) - minpos == 2)
+	else if ((int) ft_stklen(stka) - minpos == 2)
 	{
 		rra(stka);
 		rra(stka);
@@ -77,7 +77,7 @@ static void	ft_sort5(t_stk **stka, t_stk **stkb)
 	return ;
 }
 
-void	ft_simplesort(t_stk **stka, t_stk **stkb, int len)
+void	ft_simplesort(t_stk **stka, t_stk **stkb, unsigned int len)
 {
 	if (len == 2)
 		sa(stka);

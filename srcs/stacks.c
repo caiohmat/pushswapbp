@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:46:07 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 19:31:00 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:33:55 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ t_stk	*ft_createentry(int nbr)
 	if (!entry)
 		return (NULL);
 	entry->nbr = nbr;
-	entry->simple = -1;
+	entry->simple = 0;
+	entry->started = 0;
 	entry->next = NULL;
 	return (entry);
 }
@@ -45,7 +46,7 @@ int	ft_findmin(t_stk **stka, int min)
 	temp = *stka;
 	while (temp)
 	{
-		if (temp->simple == min)
+		if ((int) temp->simple == min)
 			position = counter;
 		counter++;
 		temp = temp->next;

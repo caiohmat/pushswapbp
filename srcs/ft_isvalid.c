@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:51 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 19:20:18 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:08:51 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	ft_onlynumbers(char *arg)
 	return (0);
 }
 
-int	ft_noduplicates(char **args, int i)
+int	ft_noduplicates(char **args, unsigned int i)
 {
-	int	j;
+	unsigned int	j;
 
 	j = i + 1;
 	while (args[j])

@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:46:01 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 19:26:24 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:44:23 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_stk	*ft_ascending(t_stk **stka)
 	lowest = NULL;
 	while (temp)
 	{
-		if ((temp->simple == -1) && (!lowest || temp->nbr < lowest->nbr))
+		if ((temp->started == 0) && (!lowest || temp->nbr < lowest->nbr))
 			lowest = temp;
 		temp = temp->next;
 	}
@@ -30,14 +30,15 @@ t_stk	*ft_ascending(t_stk **stka)
 
 void	ft_simplify(t_stk **stka)
 {
-	t_stk	*temp;
-	int		simple;
+	t_stk				*temp;
+	unsigned int		simple;
 
 	simple = 0;
 	temp = ft_ascending(stka);
 	while (temp)
 	{
 		temp->simple = simple++;
+		temp->started = 1;
 		temp = ft_ascending(stka);
 	}
 	return ;
