@@ -6,11 +6,11 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:35 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 18:45:36 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 18:58:44 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/push_swap.h"
+#include "../include/push_swap.h"
 
 static int	ft_swap(t_stk **stk)
 {
@@ -41,7 +41,7 @@ int	sb(t_stk **stkb)
 	return (ft_swap(stkb));
 }
 
-int ss(t_stk **stka, t_stk **stkb)
+int	ss(t_stk **stka, t_stk **stkb)
 {
 	ft_putendl_fd("ss", 1);
 	return (ft_swap(stka) + ft_swap(stkb));

@@ -6,15 +6,15 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:51 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 18:45:52 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:20:18 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/push_swap.h"
+#include "../include/push_swap.h"
 
 int	ft_onlynumbers(char *arg)
 {
-	unsigned int 	counter;
+	unsigned int	counter;
 
 	counter = 0;
 	while (arg[counter] != '\0')
@@ -50,7 +50,7 @@ int	ft_overflow(char *arg)
 
 	n = ft_atoi(arg);
 	if (n > 2147483647 || n < -2147483648)
-		return(1);
+		return (1);
 	return (0);
 }
 
@@ -62,7 +62,7 @@ void	ft_isvalid(char **args)
 	while (args[counter])
 	{
 		if (ft_onlynumbers(args[counter]) || ft_noduplicates(args, counter)
-		|| ft_overflow(args[counter]))
+			|| ft_overflow(args[counter]))
 			ft_freeandexit(args);
 		counter++;
 	}

@@ -6,36 +6,15 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:46:04 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 18:46:05 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:32:14 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/push_swap.h"
-
-void	escreve(t_stk **stka, t_stk **stkb)
-{
-	t_stk	*temp;
-
-	temp = *stka;
-	while (temp)
-	{
-		printf("%d ", temp->simple);
-		temp = temp->next;
-	}
-	printf("\n");
-	temp = *stkb;
-	while (temp)
-	{
-		printf("%d ", temp->simple);
-		temp = temp->next;
-	}
-	printf("\n");
-	return ;
-}
+#include "../include/push_swap.h"
 
 static char	**ft_getnbrs(int argc, char **argv)
 {
-	char	**args;
+	char			**args;
 	unsigned int	counter;
 
 	if (argc == 2)
@@ -59,7 +38,7 @@ static void	ft_sort(t_stk **stka, t_stk **stkb)
 	if (ft_stklen(stka) <= 5)
 		ft_simplesort(stka, stkb, ft_stklen(stka));
 	else
-		ft_radix(stka,stkb, ft_stklen(stka));
+		ft_radix(stka, stkb, ft_stklen(stka));
 	return ;
 }
 

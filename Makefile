@@ -10,6 +10,7 @@ SRCS	:= srcs/ft_isvalid.c \
 			srcs/stacks.c\
 			srcs/ft_radix.c\
 			srcs/ft_simplesort.c\
+			srcs/utils.c\
 			commands/push.c\
 			commands/swap.c\
 			commands/rotate.c\

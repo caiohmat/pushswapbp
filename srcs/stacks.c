@@ -6,11 +6,11 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:46:07 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 18:46:08 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:31:00 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/push_swap.h"
+#include "../include/push_swap.h"
 
 t_stk	*ft_createentry(int nbr)
 {
@@ -57,7 +57,7 @@ void	ft_addentryback(t_stk **stk, t_stk *newentry)
 {
 	t_stk	*lastentry;
 
-	if(*stk)
+	if (*stk)
 	{
 		lastentry = ft_findlast(*stk);
 		lastentry->next = newentry;
@@ -65,14 +65,14 @@ void	ft_addentryback(t_stk **stk, t_stk *newentry)
 	else
 	{
 		*stk = newentry;
-		(*stk)->next = NULL;;
+		(*stk)->next = NULL;
 	}
 	return ;
 }
 
 void	ft_stackstart(t_stk **stka, char **args)
 {
-	t_stk	*entry;
+	t_stk			*entry;
 	unsigned int	counter;
 
 	counter = 0;
@@ -85,32 +85,4 @@ void	ft_stackstart(t_stk **stka, char **args)
 	ft_freeptr(args);
 	ft_simplify(stka);
 	return ;
-}
-
-int	ft_stklen(t_stk **stk)
-{
-	t_stk	*temp;
-	unsigned int	len;
-
-	temp = *stk;
-	len = 0;
-	while (temp)
-	{
-		len++;
-		temp = temp->next;
-	}
-	return (len);
-}
-int	ft_sorted(t_stk **stka)
-{
-	t_stk	*temp;
-
-	temp = *stka;
-	while (temp && temp->next)
-	{
-		if (temp->nbr >= temp->next->nbr)
-			return (1);
-		temp = temp->next;
-	}
-	return (0);
 }

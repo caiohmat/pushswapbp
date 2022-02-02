@@ -6,11 +6,11 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2021/09/10 13:33:59 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:10:59 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int	c)
+int	ft_isalnum(int c)
 {
 	if (((c >= 'A') && (c <= 'Z'))
 		|| ((c >= 'a') && (c <= 'z'))

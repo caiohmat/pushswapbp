@@ -6,13 +6,13 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/01/18 18:05:32 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:13:13 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char	*s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	counter;
 

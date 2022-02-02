@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_simplify.c                                      :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 18:46:01 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 19:26:24 by chideyuk         ###   ########.fr       */
+/*   Created: 2022/02/02 19:31:31 by chideyuk          #+#    #+#             */
+/*   Updated: 2022/02/02 19:33:09 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-t_stk	*ft_ascending(t_stk **stka)
+int	ft_sorted(t_stk **stka)
 {
 	t_stk	*temp;
-	t_stk	*lowest;
 
 	temp = *stka;
-	lowest = NULL;
-	while (temp)
+	while (temp && temp->next)
 	{
-		if ((temp->simple == -1) && (!lowest || temp->nbr < lowest->nbr))
-			lowest = temp;
+		if (temp->nbr >= temp->next->nbr)
+			return (1);
 		temp = temp->next;
 	}
-	return (lowest);
+	return (0);
 }
 
-void	ft_simplify(t_stk **stka)
+int	ft_stklen(t_stk **stk)
 {
-	t_stk	*temp;
-	int		simple;
+	t_stk			*temp;
+	unsigned int	len;
 
-	simple = 0;
-	temp = ft_ascending(stka);
+	temp = *stk;
+	len = 0;
 	while (temp)
 	{
-		temp->simple = simple++;
-		temp = ft_ascending(stka);
+		len++;
+		temp = temp->next;
 	}
-	return ;
+	return (len);
 }

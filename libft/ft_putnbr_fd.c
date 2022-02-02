@@ -6,13 +6,13 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2021/09/10 13:33:59 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:17:17 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_convert(int	n, int	len, char	*ptr)
+static char	*ft_convert(int n, int len, char *ptr)
 {
 	ptr[len] = '\0';
 	len--;
@@ -38,7 +38,7 @@ static char	*ft_convert(int	n, int	len, char	*ptr)
 	return (ptr);
 }
 
-void	ft_putnbr_fd(int	n, int	fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	ptr[32];	
 	int		len;

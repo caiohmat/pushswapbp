@@ -6,13 +6,13 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/01/18 19:39:15 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:12:30 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char	*str)
+char	*ft_strdup(const char *str)
 {
 	char	*copy;
 	size_t	lenght;

@@ -6,13 +6,13 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2021/09/10 13:33:59 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:11:58 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar_fd(char	c, int	fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

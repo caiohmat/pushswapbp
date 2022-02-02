@@ -6,11 +6,11 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:58 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 18:45:59 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:19:25 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/push_swap.h"
+#include "../include/push_swap.h"
 
 static void	ft_pushmin(t_stk **stka, t_stk **stkb, int min)
 {

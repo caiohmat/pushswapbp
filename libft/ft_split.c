@@ -6,13 +6,13 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2021/09/10 13:33:59 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:16:58 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_ptrn(char const	*s, char	c)
+static size_t	ft_ptrn(char const *s, char c)
 {
 	size_t	ptrn;
 	size_t	counter;
@@ -33,7 +33,7 @@ static size_t	ft_ptrn(char const	*s, char	c)
 	return (ptrn);
 }
 
-static char	**ft_suballoc(char const	*s, char	c, char	**ptr)
+static char	**ft_suballoc(char const *s, char c, char **ptr)
 {
 	size_t	c1;
 	size_t	c2;
@@ -61,7 +61,7 @@ static char	**ft_suballoc(char const	*s, char	c, char	**ptr)
 	return (ptr);
 }
 
-static char	**ft_subcpy(char const	*s, char	c, char	**ptr)
+static char	**ft_subcpy(char const *s, char c, char **ptr)
 {
 	size_t	c1;
 	size_t	c2;
@@ -89,7 +89,7 @@ static char	**ft_subcpy(char const	*s, char	c, char	**ptr)
 	return (ptr);
 }
 
-char	**ft_split(char const	*s, char	c)
+char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	size_t	ptrn;

@@ -6,11 +6,11 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/01/20 16:57:51 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:10:44 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long	ft_atoi(const char	*nptr)
+long	ft_atoi(const char *nptr)
 {
 	long	nbr;
 	int		sign;

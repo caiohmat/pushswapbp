@@ -6,13 +6,13 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 13:33:37 by chideyuk          #+#    #+#             */
-/*   Updated: 2021/09/10 13:33:59 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:12:47 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const	*s1, char const	*s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;
 	size_t	len1;

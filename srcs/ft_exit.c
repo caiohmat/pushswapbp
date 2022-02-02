@@ -6,15 +6,15 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:48 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 18:45:49 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 19:19:07 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/push_swap.h"
+#include "../include/push_swap.h"
 
 void	ft_freeptr(char **args)
 {
-	unsigned int 	counter;
+	unsigned int	counter;
 
 	counter = 0;
 	while (args[counter])
