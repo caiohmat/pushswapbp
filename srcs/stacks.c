@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:46:07 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 20:33:55 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 22:02:42 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_stk	*ft_createentry(int nbr)
 {
 	t_stk	*entry;
 
-	entry = (t_stk *) malloc(sizeof(*entry));
+	entry = malloc(sizeof(*entry));
 	if (!entry)
 		return (NULL);
 	entry->nbr = nbr;

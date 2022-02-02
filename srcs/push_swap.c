@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:46:04 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 19:32:14 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/02 22:02:03 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ int	main(int argc, char **argv)
 		return (0);
 	args = ft_getnbrs(argc, argv);
 	ft_isvalid(args);
-	stka = (t_stk **)malloc(sizeof(t_stk));
-	stkb = (t_stk **)malloc(sizeof(t_stk));
+	stka = malloc(sizeof(t_stk **));
+	stkb = malloc(sizeof(t_stk **));
 	*stka = NULL;
 	*stkb = NULL;
 	ft_stackstart(stka, args);
