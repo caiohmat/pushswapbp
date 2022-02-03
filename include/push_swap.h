@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:40 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 20:33:17 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:54:34 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int					rrb(t_stk **stkb);
 int					rrr(t_stk **stka, t_stk **stkb);
 t_stk				*ft_findlast(t_stk	*entry);
 void				ft_radix(t_stk **stka, t_stk **stkb, unsigned int len);
-int					ft_findmin(t_stk **stka, int min);
+int					ft_findmin(t_stk **stka);
 void				ft_simplesort(t_stk **stka, t_stk **stkb, unsigned int len);
 
 #endif

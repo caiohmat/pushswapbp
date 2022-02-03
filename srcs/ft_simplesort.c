@@ -6,17 +6,17 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:58 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/02 20:26:11 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:57:46 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	ft_pushmin(t_stk **stka, t_stk **stkb, int min)
+static void	ft_pushmin(t_stk **stka, t_stk **stkb)
 {
 	int	minpos;
 
-	minpos = ft_findmin(stka, min);
+	minpos = ft_findmin(stka);
 	if (minpos + 1 == (int) ft_stklen(stka))
 		rra(stka);
 	else if ((int) ft_stklen(stka) - minpos == 2)
@@ -36,18 +36,20 @@ static void	ft_pushmin(t_stk **stka, t_stk **stkb, int min)
 static void	ft_sort3(t_stk	**stk)
 {
 	t_stk	*temp;
+	int		minpos;
 
 	temp = *stk;
-	if (temp->simple == 0)
+	minpos = ft_findmin(stk);
+	if (minpos == 0)
 	{
 		rra(stk);
 		sa(stk);
 	}
-	else if (temp->simple == 1 && temp->next->simple == 0)
+	else if (minpos == 1 && (temp->simple < temp->next->next->simple))
 		sa(stk);
-	else if (temp->simple == 1 && temp->next->simple == 2)
+	else if (minpos == 2 && (temp->simple < temp->next->simple))
 		rra(stk);
-	else if (temp->simple == 2 && temp->next->simple == 1)
+	else if (minpos == 2 && (temp->simple > temp->next->simple))
 	{
 		sa(stk);
 		rra(stk);
@@ -57,23 +59,21 @@ static void	ft_sort3(t_stk	**stk)
 	return ;
 }
 
+static void	ft_sort4(t_stk **stka, t_stk **stkb)
+{
+	ft_pushmin(stka, stkb);
+	pb(stka, stkb);
+	ft_sort3(stka);
+	pa(stka, stkb);
+	return ;
+}
+
 static void	ft_sort5(t_stk **stka, t_stk **stkb)
 {
-	t_stk	*temp;
-	int		min;
-
-	min = 0;
-	while (*stka && ft_sorted(stka))
-	{
-		temp = *stka;
-		if (temp->simple > temp->next->simple)
-			sa(stka);
-		if (ft_sorted(stka))
-			ft_pushmin(stka, stkb, min);
-		min++;
-	}
-	while (*stkb)
-		pa(stka, stkb);
+	ft_pushmin(stka, stkb);
+	pb(stka, stkb);
+	ft_sort4(stka, stkb);
+	pa(stka, stkb);
 	return ;
 }
 
@@ -83,7 +83,9 @@ void	ft_simplesort(t_stk **stka, t_stk **stkb, unsigned int len)
 		sa(stka);
 	else if (len == 3)
 		ft_sort3(stka);
-	else if (len <= 5)
+	else if (len == 4)
+		ft_sort4(stka, stkb);
+	else if (len == 5)
 		ft_sort5(stka, stkb);
 	return ;
 }
