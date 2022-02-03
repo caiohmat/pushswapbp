@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:51 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/03 19:56:48 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/03 21:05:12 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,17 +59,17 @@ void	ft_isvalid(char **args)
 	unsigned int	counter;
 
 	counter = 0;
-	if (args[1] == NULL)
-	{
-		ft_freeptr(args);
-		exit(0);
-	}
 	while (args[counter])
 	{
 		if (ft_onlynumbers(args[counter]) || ft_noduplicates(args, counter)
 			|| ft_overflow(args[counter]))
 			ft_freeandexit(args);
 		counter++;
+	}
+	if (args[1] == NULL)
+	{
+		ft_freeptr(args);
+		exit(0);
 	}
 	return ;
 }
