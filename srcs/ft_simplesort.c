@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:58 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/03 18:39:10 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:46:40 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ static void	ft_sort3(t_stk	**stk)
 static void	ft_sort4(t_stk **stka, t_stk **stkb)
 {
 	ft_pushmin(stka, stkb);
-	ft_sort3(stka);
+	if (ft_sorted(stka))
+		ft_sort3(stka);
 	pa(stka, stkb);
 	return ;
 }
@@ -72,7 +73,8 @@ static void	ft_sort4(t_stk **stka, t_stk **stkb)
 static void	ft_sort5(t_stk **stka, t_stk **stkb)
 {
 	ft_pushmin(stka, stkb);
-	ft_sort4(stka, stkb);
+	if (ft_sorted(stka))
+		ft_sort4(stka, stkb);
 	pa(stka, stkb);
 	return ;
 }
