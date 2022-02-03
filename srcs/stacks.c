@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:46:07 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/03 16:52:22 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/03 17:12:15 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,18 @@ t_stk	*ft_findlast(t_stk	*entry)
 
 int	ft_findmin(t_stk **stka)
 {
-	t_stk	*temp;
-	int		counter;
-	int		position;
+	t_stk				*temp;
+	int					counter;
+	int					position;
+	unsigned int		min;
 
 	counter = 0;
 	position = 0;
 	temp = *stka;
+	min = temp->simple;
 	while (temp && temp->next)
 	{
-		if (temp->next->simple < temp->simple)
+		if (temp->simple < min)
 			position = counter + 1;
 		counter++;
 		temp = temp->next;
