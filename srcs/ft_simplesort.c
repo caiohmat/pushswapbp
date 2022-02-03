@@ -6,7 +6,7 @@
 /*   By: chideyuk <chideyuk@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 18:45:58 by chideyuk          #+#    #+#             */
-/*   Updated: 2022/02/03 17:43:35 by chideyuk         ###   ########.fr       */
+/*   Updated: 2022/02/03 18:39:10 by chideyuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ static void	ft_pushmin(t_stk **stka, t_stk **stkb)
 		rra(stka);
 		rra(stka);
 	}
+	else if (minpos == 1)
+		ra(stka);
 	else if (minpos != 0)
 	{
 		ra(stka);
